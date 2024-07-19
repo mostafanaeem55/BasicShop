@@ -1,0 +1,60 @@
+<div class="container mt-3">
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <button class="btn btn-secondary mb-3" (click)="createNewCart()">Create New Cart</button>
+      <div class="mb-3">
+        <input type="text" class="form-control" [(ngModel)]="searchQuery" placeholder="Search products...">
+        <button class="btn btn-primary mt-2" (click)="searchProducts()">Search</button>
+      </div>
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Available Quantity</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td>{{ product.name }}</td>
+            <td>{{ product.price | currency }}</td>
+            <td>{{ product.quantity }}</td>
+            <td>
+              <button class="btn btn-primary" (click)="addToCart(product)">Add</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-md-6">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of cartItems">
+            <td>{{ item.product.name }}</td>
+            <td>{{ item.product.price | currency }}</td>
+            <td>
+              <input type="number" class="form-control" [(ngModel)]="item.quantity" (ngModelChange)="updateCartItem(item)" [max]="item.product.quantity" min="1">
+            </td>
+            <td>
+              <button class="btn btn-danger" (click)="removeCartItem(item.id)">Remove</button>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" class="text-right"><strong>Total:</strong></td>
+            <td>{{ totalAmount | currency }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

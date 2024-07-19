@@ -1,0 +1,45 @@
+<div class="container mt-3">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <input type="text" class="form-control" [(ngModel)]="searchQuery" placeholder="Search products...">
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-primary w-100" (click)="onSearch()">Search</button>
+      </div>
+    </div>
+  
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Visible</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.name }}</td>
+          <td>{{ product.price | currency }}</td>
+          <td>{{ product.quantity }}</td>
+          <td>{{ product.visible ? 'Yes' : 'No' }}</td>
+          <td>
+            <mat-slide-toggle 
+              [checked]="product.visible" 
+              (change)="toggleVisibility(product)">
+              {{ product.visible ? 'Hide' : 'Show' }}
+            </mat-slide-toggle>
+          </td>
+        </tr>
+        <tr> 
+          <td><input type="text" class="form-control" #newName></td>
+          <td><input type="number" class="form-control" #newPrice></td>
+          <td><input type="number" class="form-control" #newQty></td>
+          <td></td>
+          <td><button class="btn btn-success" (click)="addNewProduct(newName.value, newPrice.valueAsNumber, newQty.valueAsNumber); newName.value=''; newPrice.value=''; newQty.value=''">Add</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
