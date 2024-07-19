@@ -9,7 +9,7 @@ import { Cart } from '../models/cart.model';
   providedIn: 'root'
 })
 export class CartServiceService {
-  private apiUrl = 'https://basicshopapis.azurewebsites.net/api/Cart';
+  private apiUrl = 'https://localhost:7144/api/Cart';
 
   constructor(private http: HttpClient) { }
   createCart(): Observable<Cart> {

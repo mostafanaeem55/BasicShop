@@ -7,7 +7,7 @@ import { Product } from '../models/product.model';
   providedIn: 'root'
 })
 export class AdminServiceService {
-  private apiUrl = 'https://basicshopapis.azurewebsites.net/api/Admin';
+  private apiUrl = 'https://localhost:7144/api/Admin';
 
   constructor(private http: HttpClient) { }
 

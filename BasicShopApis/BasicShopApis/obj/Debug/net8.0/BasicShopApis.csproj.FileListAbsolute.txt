@@ -135,3 +135,4 @@ C:\Users\mosta\OneDrive\Desktop\BasicShop\BasicShopApis\BasicShopApis\obj\Debug\
 C:\Users\mosta\OneDrive\Desktop\BasicShop\BasicShopApis\BasicShopApis\obj\Debug\net8.0\BasicShopApis.pdb
 C:\Users\mosta\OneDrive\Desktop\BasicShop\BasicShopApis\BasicShopApis\obj\Debug\net8.0\BasicShopApis.genruntimeconfig.cache
 C:\Users\mosta\OneDrive\Desktop\BasicShop\BasicShopApis\BasicShopApis\obj\Debug\net8.0\ref\BasicShopApis.dll
+C:\Users\mosta\OneDrive\Desktop\BasicShop\BasicShopApis\BasicShopApis\obj\Debug\net8.0\BasicShopApis.sourcelink.json
