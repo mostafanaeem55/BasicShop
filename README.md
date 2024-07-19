@@ -31,18 +31,3 @@ ng serve
 
 This will install the Angular dependencies and start the frontend development server. It usually runs on http://localhost:4200.
 Access the App: Open your web browser and navigate to http://localhost:4200. You should see the BasicShop storefront!
-
-Project Structure
-basicshop/
-│   README.md
-│
-├── WebApi/         (Your .NET Web API project)
-│   ├── Controllers/ 
-│   ├── ...
-│
-└── AngularApp/     (Your Angular project)
-    ├── src/
-    │   ├── app/
-    │   ├── environments/
-    │   ├── ...
-    ├── ...
